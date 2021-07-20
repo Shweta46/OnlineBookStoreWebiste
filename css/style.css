@@ -1,0 +1,287 @@
+/* css reset */
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* css variables */
+:root{
+    --navbar-height: 59px;
+}
+
+body{
+    align-items: center;
+}
+
+/* Navigation Bar */
+#navbar{
+    /* relative to make the background fit the content inside navbar and not go anywhere */
+    position: sticky;
+    display: flex;
+    align-items: center;
+    font-family: 'Baloo Bhai 2', cursive;
+    top: 0px;
+    
+    /* margin-bottom: 18px; */
+    /* padding: 0px 0px 0px 0px;
+    margin: 0px 0px 18px 0px; */
+    
+}
+
+#navbar::before{
+    content: "";
+    background-color: rgb(213, 60, 19);
+    position: absolute;
+    height: 90%;
+    /* margin-bottom: 36px; */
+    width: 100%;
+    /* object-fit: content; */
+    z-index: -1;
+    opacity: 0.89;
+
+    /* takes the image or the section to the top without any gap */
+    top: 0px;
+    left: 0px;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 15px 15px;
+}
+
+#logo img{
+    height: 61px;
+    margin: 0px 20px;
+    
+    /* margin-bottom: 3px; */
+}
+
+#logo img:hover{
+    transform: scale(1.2);
+    background-color: white;
+    border-radius: 23px
+}
+
+/* Navigation Bar: List styling */
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{
+    color: white;
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 0px 10px;
+    /* here anchor tag is separate as it helps in styling within the listed items after the flex box is created */
+}
+
+/* sirf class select karke kuch nahi kar raha hai ye */
+/* anchor tag specifically focuses on the text inside */
+
+#navbar ul li a{
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+    font-size: 1.5rem;
+}
+
+/* Home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 100px;
+    height: 419px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('../bg7.jpg') no-repeat center center/cover;
+    height: 525px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+/* Services section */
+
+#services{
+    display: flex;
+    margin: 4px;
+    /* margin-bottom: 36px; */
+    /* position: relative; */
+}
+
+#services .box{
+    /* just to get the idea of our box */
+    border: 2px solid brown;
+    padding: 31px;
+    margin: 20px 6px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img{
+    display: block;
+    margin: auto;
+    height: 160px;
+
+}
+
+#services .box p{
+    font-family: 'Crete Round', serif;
+    font-weight: 5;
+}
+
+
+/* CLient sections */
+#client-section{
+    /* height: 248px; */
+    position: relative;
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../bg6.jpg') no-repeat center center/cover;
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 0px;
+}
+
+#clients img{
+    height: 70px;
+
+}
+
+.client-item{
+    padding: 34px 40px;
+}
+
+#contact{
+    top: 0px;
+    bottom: 0px;
+    position: relative;
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    background: url('/conta.jpg') no-repeat center center/cover;
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    top: 0px;
+    left: 0px;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contact-box form{
+    width: 50%;
+
+}
+
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Crete Round', serif;
+
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility classes */
+
+/* font sizes here are all in rem to make the website responsive */
+#home h1{
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 3px 2px rgb(7, 7, 7);
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+.h-primary{
+    font-size: 3.4rem;
+    padding: 15px;
+    font-family: 'Bree Serif', serif;
+    color: #fb4133eb;
+    text-shadow: 8px 1px rgb(29, 198, 198, 38%);
+}
+
+.h-secondary{
+    font-size: 2.1rem;
+    font-family: 'Bree Serif', serif;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(232 196 195);
+    margin: 17px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    border: 2px solid rgb(179, 24, 24);
+    background-color: rgb(253, 253, 253);
+    font-size: 1.5rem;
+}
+
+.center{
+    text-align: center;
+}
+
